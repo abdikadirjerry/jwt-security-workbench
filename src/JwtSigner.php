@@ -24,7 +24,7 @@ final class JwtSigner
 
         $headerJson = json_encode(['alg' =>$normalizedAlg, 'typ' => 'JWT'], JSON_UNESCAPED_SLASHES);
         $payloadJson = json_encode($claims, JSON_UNESCAPED_SLASHES);
-        if ($headerJson === false \vert{}\vert{}$payloadJson === false) {
+        if ($headerJson === false |{}|{}$payloadJson === false) {
             throw new \RuntimeException('Failed to encode JWT header or payload JSON.');
         }
 

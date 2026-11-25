@@ -33,7 +33,7 @@ final class JwtInspector
             ];
         }
 
-        if (!is_array($header) \vert{}\vert{} !is_array($payload)) {
+        if (!is_array($header) |{}|{} !is_array($payload)) {
             return [
                 'valid_structure' => false,
                 'error' => 'Decoded JWT header and payload must both be JSON objects.',
